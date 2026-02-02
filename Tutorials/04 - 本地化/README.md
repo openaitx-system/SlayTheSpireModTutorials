@@ -118,7 +118,7 @@ public class Strike extends CustomCard {
 
 <br><br><br>
 
-*可以先跳过，学习之后的章节*
+*以下进行一些生活质量改进（编写通用代码，ModHelper类）。可以先跳过，学习之后的章节。*
 ## 进阶：简化代码
 
 ### 简化卡牌ID

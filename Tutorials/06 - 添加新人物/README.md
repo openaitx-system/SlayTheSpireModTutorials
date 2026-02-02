@@ -123,7 +123,7 @@ public class MyCharacter extends CustomPlayer {
         return new Strike();
     }
 
-    // 卡牌轨迹颜色
+    // 卡牌轨迹颜色（和CardColor不是同一个类。使用com.badlogic.gdx.graphics.Color）
     @Override
     public Color getCardTrailColor() {
         return ExampleMod.MY_COLOR;
@@ -182,7 +182,7 @@ public class MyCharacter extends CustomPlayer {
         return characterStrings.TEXT[1];
     }
 
-    // 打心脏的颜色，不是很明显
+    // 打心脏的颜色，不是很明显（和CardColor不是同一个类。使用com.badlogic.gdx.graphics.Color）
     @Override
     public Color getSlashAttackColor() {
         return ExampleMod.MY_COLOR;
@@ -194,7 +194,7 @@ public class MyCharacter extends CustomPlayer {
         return Vampires.DESCRIPTIONS[0];
     }
 
-    // 卡牌选择界面选择该牌的颜色
+    // 卡牌选择界面选择该牌的颜色（和CardColor不是同一个类。使用com.badlogic.gdx.graphics.Color）
     @Override
     public Color getCardRenderColor() {
         return ExampleMod.MY_COLOR;
@@ -231,6 +231,8 @@ public class MyCharacter extends CustomPlayer {
     }
 }
 ```
+
+*注意其中的`AbstractCard.CardColor`和`Color`不是同一个类。*
 
 最下面我们添加了一些必要的枚举，你可以在你之前添加颜色的地方引用它。
 

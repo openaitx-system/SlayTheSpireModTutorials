@@ -94,6 +94,7 @@ public class ExampleMod implements EditCardsSubscriber, EditStringsSubscriber, E
 EditRelicsSubscriber { // 新增
 // ...其余省略
 
+    @Override
     public void receiveEditStrings() {
         String lang;
         if (Settings.language == GameLanguage.ZHS) {

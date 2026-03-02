@@ -1,5 +1,5 @@
 @SpireInitializer
-public class ExampleMod implements EditCardsSubscriber, EditStringsSubscriber, EditCharactersSubscriber{
+public class ExampleMod implements EditCardsSubscriber, EditStringsSubscriber, EditCharactersSubscriber, EditRelicsSubscriber{
     private static final String MY_CHARACTER_BUTTON = "ExampleModResources/img/char/Character_Button.png";
     private static final String MY_CHARACTER_PORTRAIT = "ExampleModResources/img/char/Character_Portrait.png";
     private static final String BG_ATTACK_512 = "ExampleModResources/img/512/bg_attack_512.png";
@@ -38,6 +38,7 @@ public class ExampleMod implements EditCardsSubscriber, EditStringsSubscriber, E
         BaseMod.addCharacter(new MyCharacter(CardCrawlGame.playerName), MY_CHARACTER_BUTTON, MY_CHARACTER_PORTRAIT, MY_CHARACTER);
     }
 
+    @Override
     public void receiveEditStrings() {
         String lang;
         if (Settings.language == GameLanguage.ZHS) {
@@ -48,5 +49,10 @@ public class ExampleMod implements EditCardsSubscriber, EditStringsSubscriber, E
         BaseMod.loadCustomStringsFile(CardStrings.class, "ExampleResources/localization/" + lang + "/cards.json");
         BaseMod.loadCustomStringsFile(CharacterStrings.class, "ExampleResources/localization/" + lang + "/characters.json");
         BaseMod.loadCustomStringsFile(RelicStrings.class, "ExampleResources/localization/" + lang + "/relics.json");
+    }
+
+    @Override
+    public void receiveEditRelics() {
+        BaseMod.addRelic(new MyRelic(), RelicType.SHARED); // RelicType表示是所有角色都能拿到的遗物，还是一个角色的独有遗物
     }
 }

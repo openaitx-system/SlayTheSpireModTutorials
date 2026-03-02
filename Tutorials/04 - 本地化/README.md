@@ -46,7 +46,7 @@ cards.json:
 
 ```java
 @SpireInitializer
-public class ExampleMod implements EditCardsSubscriber, EditStringsSubscriber {
+public class ExampleMod implements EditCardsSubscriber, EditStringsSubscriber { // 注意添加新的接口
     public ExampleMod() {
         BaseMod.subscribe(this);
     }
@@ -60,6 +60,7 @@ public class ExampleMod implements EditCardsSubscriber, EditStringsSubscriber {
         BaseMod.addCard(new Strike());
     }
 
+    @Override
     public void receiveEditStrings() {
         String lang;
         if (Settings.language == GameLanguage.ZHS) {

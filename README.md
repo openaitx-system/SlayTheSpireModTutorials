@@ -1,6 +1,8 @@
 杀戮尖塔mod制作教程
 =====================
 
+《杀戮尖塔2》模组制作教程更新中： https://github.com/GlitchedReme/SlayTheSpire2ModdingTutorials
+
 <b>本教程不会讲解Java编程知识，建议先了解一些编程基础再来学习。</b>
 
 <b>如果读者在阅读本教程时发现了错误或者一些不合理的地方，可以通过提交issues帮助改进这篇教程。</b>
